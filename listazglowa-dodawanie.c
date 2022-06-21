@@ -9,7 +9,7 @@ struct element
     struct element * next;
 };
 
-struct element * dodajk(struct element* lista, int a)
+void dodajk(struct element* lista, int a)
 {
     struct element* wsk=lista;
     while(wsk->next!=NULL)
