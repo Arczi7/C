@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//LISTA BEZ G£OWY - DODAWANIE NA KONIEC
+//LISTA BEZ G£OWY
 
 struct element
 {
@@ -9,7 +9,7 @@ struct element
     struct element * next;
 };
 
-struct element * dodajk(struct element* lista, int a)
+struct element * dodajk(struct element* lista, int a) // DODAWANIE NA KONIEC
 {
     struct element * wsk;
     if(lista==NULL) // pusta lista
@@ -33,6 +33,18 @@ struct element * dodajk(struct element* lista, int a)
     }
     return lista;
 };
+
+struct element* wyczysc(struct element *Lista) //CZYSZCZENIE
+{
+    struct element * wsk=Lista;
+    while(Lista!=NULL)
+    {
+        Lista=Lista->next;
+        free(wsk);
+        wsk=Lista;
+    }
+    return NULL;
+}
 
 void wyswietlListeBezGlowy(struct element* Lista)
 {
