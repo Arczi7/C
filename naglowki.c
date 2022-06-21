@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-//ZADANIA Z NAG£”WKIEM
+//ZADANIA Z NAG¬£√ìWKIEM
 
 //int char char * * * ( ) napis1 napis2 , foo
 
@@ -16,18 +16,32 @@ void fun(int** tab, char* n, int m[])
     printf("test");
 }
 
+//void int int int int ( ) ( ) ( ) * , , fun a b n wsk
+
+void fun2(int (*wsk) (int a, int b), int n)
+{
+    printf("test");   
+}
+
+int funkcja(int a, int b)
+{
+    return 5;
+}
+
 int main()
 {
-    //PIERWSZY NAG£”WEK
+    //PIERWSZY NAG¬£√ìWEK
     char* a = "test";
     char* b = "abc";
     printf("%p\n", foo(a,b));
 
-    //DRUGI NAG£”WEK
+    //DRUGI NAG¬£√ìWEK
     int** tab1=NULL;
     char *n1="ABC";
     int tab2[]={3};
     fun(tab1, n1, tab2);
-
+    
+    //TRZECI NAG≈Å√ìWEK
+    fun2(funkcja, 60);
     return 0;
 }
